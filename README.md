@@ -1,7 +1,8 @@
-# 🚗 Car Price Prediction - End-to-End ML Project
+# 🚗 Car Price Prediction Model with Business Insights - End-to-End ML Project
 
 This repository showcases a complete **end-to-end machine learning project** on predicting car resale prices. It includes data preprocessing, model building, explainable ML with SHAP, and a business-ready dashboard in Power BI.
 
+**Pipeline + Explainable ML + Power BI Dashboard**
 ---
 
 ## 📌 Project Workflow
@@ -51,9 +52,7 @@ This repository showcases a complete **end-to-end machine learning project** on 
 
 ## 📁 Files
 - `car_data.csv` - raw dataset
-- `car_price_pipeline.ipynb` - full pipeline + model training
-- `eda_analysis.ipynb` - visual insights & correlation
-- `shap_explainer.ipynb` - SHAP value plots
+- `notebook` - code work
 - `cleaned_car_data.csv` - exported clean dataset
 - `car_price_insights_report.pdf` - Power BI dashboard report
 
@@ -69,8 +68,7 @@ This repository showcases a complete **end-to-end machine learning project** on 
 ## 🤝 Let's Connect!
 Open to Data Analyst / ML Intern opportunities.  
 Connect with me:
-- 📧 Email: [your.email@example.com]
-- 🌐 GitHub: [github.com/yourprofile]
+- 📧 Email: [mathanponraj03@gmail.com]
 - 💼 LinkedIn: [www.linkedin.com/in/mathan03]
 
 ---
