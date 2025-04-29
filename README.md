@@ -58,12 +58,15 @@ This repository showcases a complete **end-to-end machine learning project** on 
 
 ---
 
-## ✅ Results
-- Highest important features: `present_price`, `car_age`
-- SHAP helped explain why the model predicted ₹2.9L instead of ₹3.8L
-- Dashboard shows clear insights for business decision-making
+
+## ✅ Outcome
+
+- Built a robust car price prediction model with explainability.
+- Gained insights into factors that influence car pricing.
+- Delivered a business-friendly dashboard using Power BI.
 
 ---
+
 
 ## 🤝 Let's Connect!
 Open to Data Analyst / ML Intern opportunities.  
