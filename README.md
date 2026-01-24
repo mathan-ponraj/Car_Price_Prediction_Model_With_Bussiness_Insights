@@ -1,80 +1,114 @@
-# Car Price Prediction Model with Business Insights – End-to-End ML Project
+# Car Price Prediction using Machine Learning
 
-This project showcases an end-to-end machine learning workflow to predict car resale prices. It includes data preprocessing, model training, model explainability using SHAP, and business reporting through a Power BI dashboard.
+## Case Study
 
----
+### Problem
+Used car pricing is influenced by multiple factors such as vehicle age, mileage, fuel type, ownership history, and market price. Accurately predicting resale value is challenging but essential for dealers and customers.
 
-## Project Overview
+### Context
+This project builds a **machine learning regression system** to predict the **selling price of used cars** using structured tabular data and real-world features.
 
-The objective is to build a predictive model that estimates car prices based on various factors such as age, fuel type, seller type, and more. The workflow integrates machine learning with business insights to deliver a practical solution for understanding pricing trends in the resale car market.
+### Impact
+- Built a robust regression pipeline with **Random Forest**
+- Achieved **R² score of 0.96**, indicating excellent predictive performance
+- Delivered an interpretable model using **feature importance and SHAP**
+- Enabled real-time price prediction for new car inputs
 
----
-
-## Features
-
-- **ETL & Preprocessing Pipeline**  
-  - Cleaned a dataset of 1,500+ car records by handling missing values and duplicates.
-  - Removed outliers using IQR method and z-score detection.
-  - Scaled numerical features with `StandardScaler`.
-  - Encoded categorical features using `OneHotEncoder` integrated in a `ColumnTransformer`.
-
-- **Model Building & Evaluation**  
-  - Trained a `RandomForestRegressor` model achieving an R² score of **0.98** on training data and **0.95** on test data.
-  - Hyperparameter tuning performed using GridSearchCV to optimise model performance.
-
-- **Explainable ML (XAI)**  
-  - Applied SHAP to interpret feature importance and visualise individual prediction breakdowns.
-  - Identified that **Age**, **Fuel Type**, and **Seller Type** are the top 3 influencing factors on resale price predictions.
-
-- **Exploratory Data Analysis (EDA)**  
-  - Conducted statistical summaries and correlation analysis.
-  - Created interactive distribution plots and trend lines to analyse the relationship between features and price.
-
-- **Power BI Dashboard**  
-  - Designed a dynamic dashboard displaying:
-    - Average price segmented by Fuel Type.
-    - Seller Type comparison insights showing dealer prices are on average **20% higher** than individual sellers.
-    - Car Age vs Price trend analysis revealing a **12% price depreciation per year**.
-  - Delivered the final dashboard in PDF format for business reporting.
+### Why It Matters
+Accurate car price estimation helps:
+- Sellers price vehicles competitively
+- Buyers avoid overpaying
+- Dealers optimize inventory valuation
 
 ---
 
-## Technologies Used
+## What I Did
 
-- Python  
-- Pandas, NumPy  
-- Scikit-learn (Pipeline, ColumnTransformer, RandomForest)  
-- SHAP (Explainable AI)  
-- Matplotlib, Seaborn  
-- Power BI
+- Performed **data cleaning and preprocessing**
+- Engineered new features like **car age**
+- Handled **outliers using IQR method**
+- Conducted extensive **EDA and visualization**
+- Built a **scikit-learn Pipeline** for preprocessing + modeling
+- Trained and evaluated a **Random Forest Regressor**
+- Explained model predictions using **SHAP values**
+- Built an interactive **user input prediction system**
 
 ---
 
-## Project Structure
+## How I Did It (STAR Method)
+
+### Situation
+The dataset contained numerical and categorical variables with outliers, skewed distributions, and mixed data types.
+
+### Task
+Develop a reliable and interpretable regression model to predict car selling prices with high accuracy.
+
+### Action
+- Cleaned dataset (duplicates, column normalization)
+- Created `car_age` feature from manufacturing year
+- Removed unnecessary columns (`car_name`, `year`)
+- Detected and removed outliers using **Interquartile Range (IQR)**
+- Performed Exploratory Data Analysis (EDA):
+  - Price distributions
+  - Feature correlations
+  - Category-wise price comparisons
+- Built preprocessing pipelines:
+  - Numerical: imputation + scaling
+  - Categorical: imputation + one-hot encoding
+- Integrated preprocessing and model using **Pipeline + ColumnTransformer**
+- Trained **RandomForestRegressor**
+- Evaluated using:
+  - R² Score
+  - Mean Squared Error
+- Explained predictions using:
+  - Feature importance
+  - SHAP summary, waterfall, and force plots
+
+### Result
+- **R² Score:** `0.958`
+- Strong generalization on unseen test data
+- Model predictions closely matched actual prices
+- Clear understanding of key price-driving features
+
+---
+
+## Tech Stack
+
+- **Programming Language:** Python
+- **Data Analysis:** Pandas, NumPy
+- **Visualization:** Matplotlib, Seaborn
+- **Machine Learning:** Scikit-learn
+- **Model:** Random Forest Regressor
+- **Preprocessing:** Pipeline, ColumnTransformer
+- **Explainability:** SHAP
+- **Evaluation Metrics:** R² Score, MSE
+
+---
+
+## Key Features Influencing Price
+
+- Present Market Price
+- Car Age
+- Kilometers Driven
+- Fuel Type
+- Transmission Type
+- Seller Type
+- Ownership History
+
+---
+
+## Example Prediction
+
+```text
+Input:
+- Present Price: 5.0 lakh
+- KMs Driven: 34,342
+- Fuel Type: Diesel
+- Seller Type: Dealer
+- Transmission: Automatic
+- Owner: 1
+- Car Age: 3
+
+Output:
+Predicted Selling Price: ₹3.39 lakh
 ```
-Car_Price_Prediction_Model
-├── README.md # Project documentation
-├── car_data.csv # Raw dataset
-├── cleaned_car_data.csv # Cleaned dataset post preprocessing
-├── notebook/
-│ └── Car_Price_Prediction.ipynb # Jupyter Notebook with complete workflow
-├── car_price_insights_report.pdf # Power BI Dashboard report
-├── requirements.txt # Required Python libraries
-```
-
----
-
-## Results
-
-- Achieved an R² score of **95%** on test data, indicating strong predictive accuracy.
-- Identified Age as the most influential factor, accounting for **40% variance** in price prediction.
-- Business insights revealed that cars aged above 5 years depreciate by **60% of their original value**.
-- Delivered a Power BI dashboard enabling stakeholders to analyse pricing trends and make informed pricing decisions.
-
----
-
-## Conclusion
-
-This project demonstrates the integration of machine learning models with business intelligence tools to create a comprehensive car price prediction and analysis system. By achieving **95% prediction accuracy** and uncovering key business insights, the model provides a practical and explainable solution for the automobile resale market, aiding data-driven decision-making.
-
----
