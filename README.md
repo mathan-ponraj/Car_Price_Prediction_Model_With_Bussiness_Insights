@@ -1,114 +1,64 @@
 # Car Price Prediction using Machine Learning
 
-## Case Study
+## Project Overview
+This project is a **learning-focused regression analysis task** where I built a machine learning model to predict the **selling price of used cars** using structured tabular data.
 
-### Problem
-Used car pricing is influenced by multiple factors such as vehicle age, mileage, fuel type, ownership history, and market price. Accurately predicting resale value is challenging but essential for dealers and customers.
-
-### Context
-This project builds a **machine learning regression system** to predict the **selling price of used cars** using structured tabular data and real-world features.
-
-### Impact
-- Built a robust regression pipeline with **Random Forest**
-- Achieved **R² score of 0.96**, indicating excellent predictive performance
-- Delivered an interpretable model using **feature importance and SHAP**
-- Enabled real-time price prediction for new car inputs
-
-### Why It Matters
-Accurate car price estimation helps:
-- Sellers price vehicles competitively
-- Buyers avoid overpaying
-- Dealers optimize inventory valuation
+The goal of this project was to practice the **complete machine learning workflow**, including data cleaning, feature engineering, model training, evaluation, and basic model interpretation.
 
 ---
 
-## What I Did
-
-- Performed **data cleaning and preprocessing**
-- Engineered new features like **car age**
-- Handled **outliers using IQR method**
-- Conducted extensive **EDA and visualization**
-- Built a **scikit-learn Pipeline** for preprocessing + modeling
-- Trained and evaluated a **Random Forest Regressor**
-- Explained model predictions using **SHAP values**
-- Built an interactive **user input prediction system**
+## Problem Statement
+Given vehicle-related features such as age, mileage, fuel type, transmission, and ownership history, the task is to predict the resale price of used cars.
 
 ---
 
-## How I Did It (STAR Method)
+## What I Worked On
 
-### Situation
-The dataset contained numerical and categorical variables with outliers, skewed distributions, and mixed data types.
-
-### Task
-Develop a reliable and interpretable regression model to predict car selling prices with high accuracy.
-
-### Action
-- Cleaned dataset (duplicates, column normalization)
-- Created `car_age` feature from manufacturing year
-- Removed unnecessary columns (`car_name`, `year`)
-- Detected and removed outliers using **Interquartile Range (IQR)**
-- Performed Exploratory Data Analysis (EDA):
-  - Price distributions
-  - Feature correlations
-  - Category-wise price comparisons
-- Built preprocessing pipelines:
-  - Numerical: imputation + scaling
-  - Categorical: imputation + one-hot encoding
-- Integrated preprocessing and model using **Pipeline + ColumnTransformer**
-- Trained **RandomForestRegressor**
-- Evaluated using:
-  - R² Score
-  - Mean Squared Error
-- Explained predictions using:
-  - Feature importance
-  - SHAP summary, waterfall, and force plots
-
-### Result
-- **R² Score:** `0.958`
-- Strong generalization on unseen test data
-- Model predictions closely matched actual prices
-- Clear understanding of key price-driving features
+- Cleaned and prepared a real-world used car dataset
+- Performed exploratory data analysis (EDA) to understand feature relationships
+- Created new features such as **car age**
+- Handled outliers using the **IQR method**
+- Encoded categorical variables and scaled numerical features
+- Trained a **Random Forest Regressor**
+- Evaluated model performance using regression metrics
+- Interpreted model behavior using feature importance and SHAP
 
 ---
 
-## Tech Stack
-
-- **Programming Language:** Python
-- **Data Analysis:** Pandas, NumPy
-- **Visualization:** Matplotlib, Seaborn
-- **Machine Learning:** Scikit-learn
-- **Model:** Random Forest Regressor
-- **Preprocessing:** Pipeline, ColumnTransformer
-- **Explainability:** SHAP
-- **Evaluation Metrics:** R² Score, MSE
+## Dataset Information
+- Data Type: Tabular (numerical and categorical features)
+- Target Variable: Selling price of used cars
+- Features: Vehicle age, mileage, fuel type, transmission, ownership, market price, etc.
 
 ---
 
-## Key Features Influencing Price
+## Model Performance
+- **Test R² Score:** ~0.96  
 
-- Present Market Price
-- Car Age
-- Kilometers Driven
-- Fuel Type
-- Transmission Type
-- Seller Type
-- Ownership History
+The model was able to explain a large portion of the variance in car prices and performed well on unseen test data.
 
 ---
 
-## Example Prediction
+## Tools & Technologies Used
+- Python  
+- Pandas, NumPy  
+- Scikit-learn  
+- Matplotlib, Seaborn  
+- SHAP  
+- Jupyter Notebook  
 
-```text
-Input:
-- Present Price: 5.0 lakh
-- KMs Driven: 34,342
-- Fuel Type: Diesel
-- Seller Type: Dealer
-- Transmission: Automatic
-- Owner: 1
-- Car Age: 3
+---
 
-Output:
-Predicted Selling Price: ₹3.39 lakh
-```
+## Key Learnings
+- Importance of data cleaning and feature engineering in regression problems
+- Handling mixed data types using preprocessing pipelines
+- Applying ensemble models like Random Forest for tabular data
+- Evaluating regression models using R² and error metrics
+- Using SHAP and feature importance to understand model predictions
+
+---
+
+## Future Improvements
+- Try hyperparameter tuning to improve model stability
+- Compare results with simpler regression models
+- Evaluate performance using additional metrics such as MAE and RMSE
