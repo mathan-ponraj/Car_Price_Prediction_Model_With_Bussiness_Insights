@@ -1,4 +1,3 @@
-# Used Car Price Prediction
 
 ## General info
 The project concerns price prediction of used cars. Based on historical car data, I have tried to predict the selling price of a car using features like present price, kilometers driven, fuel type, transmission, owner, and car age. The project includes data analysis, data preparation, feature engineering, model building, and business insight visualization using a machine learning workflow implemented in a single notebook.
